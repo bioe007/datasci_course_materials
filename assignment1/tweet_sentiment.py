@@ -50,20 +50,7 @@ for tweet in tweet_data:
     tw_keys = tw_words.intersection(d_sentiment)
     tw_sent_value = sum([d_sentiment[k] for k in tw_keys])
     if tw_sent_value > 0:
-        print('tweet: ', tweet['id'], tweet['text'])
-        print('score', tw_sent_value)
-
-
-
-# Tweet work
-# 3. sum sentiment scores for each tweets text
-
-print("We have {0} tweets".format(len(tweet_data)))
-sys.exit(0)
-
-
-
-
+        print('tweet: {0} score: {1}'.format(tweet['id'], tw_sent_value))
 
 
 def main():
