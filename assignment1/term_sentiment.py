@@ -56,8 +56,6 @@ class TermDict(dict):
     def update(self, *args, **kwargs):
         """Adds the values found to existing keys and averages them.
 
-        Because each updated word may have a new sentiment score, I sum them and
-        average moving along.
         """
         try:
             for k, v in args[0].iteritems():
